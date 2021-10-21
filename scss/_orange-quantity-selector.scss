@@ -1,0 +1,22 @@
+.quantity-selector {
+  &.quantity-selector-large .input-group {
+    width: 7.5em;
+  }
+  &.quantity-sm .input-group {
+    width: 5.625em;
+  }
+  input {
+    padding: 0;
+    text-align: center;
+    background-color: #fff;
+  }
+  button {
+    border: .125rem solid #ccc;
+    &:first-of-type {
+      border-right: none;
+    }
+    &:last-of-type {
+      border-left: none;
+    }
+  }
+}
