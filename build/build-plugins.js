@@ -37,6 +37,7 @@ const bsPlugins = {
   Modal: path.resolve(__dirname, '../js/src/modal.js'),
   Offcanvas: path.resolve(__dirname, '../js/src/offcanvas.js'),
   Popover: path.resolve(__dirname, '../js/src/popover.js'),
+  QuantitySelector: path.resolve(__dirname, '../js/src/quantity-selector.js'),
   ScrollSpy: path.resolve(__dirname, '../js/src/scrollspy.js'),
   Tab: path.resolve(__dirname, '../js/src/tab.js'),
   Toast: path.resolve(__dirname, '../js/src/toast.js'),
@@ -70,6 +71,7 @@ const getConfigByPluginKey = pluginKey => {
     case 'Carousel':
     case 'Collapse':
     case 'Modal':
+    case 'QuantitySelector':
     case 'ScrollSpy': {
       const config = Object.assign(defaultPluginConfig)
       config.external.push(bsPlugins.Manipulator)
