@@ -10,6 +10,10 @@ toc: true
 
 Quantity selector is a form element used to select a number. For proper styling, use one of the two **required** contextual classes (e.g., `.quantity-selector-large`).
 
+It is possible to disable the possibility to manually change the value of the input by adding a **readonly** atrribute on it.
+
+You can also add the class `.allow-negatives-values` on the `.input-group` in order to allow negative values.
+
 {{< example >}}
 <div class="quantity-selector quantity-selector-large">
     <label class="input-group-text" for="inputQuantitySelector1">Quantity selector large: </label>
@@ -32,7 +36,7 @@ Quantity selector is a form element used to select a number. For proper styling,
 </div>
 <div class="quantity-selector quantity-selector-small">
     <label class="input-group-text" for="inputQuantitySelector2">Quantity selector small: </label>
-    <div id="quantity-selectors-small" class="input-group">
+    <div id="quantity-selectors-small" class="input-group allow-negatives-values">
         <button type="button" class="btn btn-icon btn-sm btn-secondary" data-bs-step="down">
             <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#remove" />

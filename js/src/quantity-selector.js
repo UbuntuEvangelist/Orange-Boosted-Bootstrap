@@ -23,9 +23,6 @@ const DATA_API_KEY = '.data-api'
 
 const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`
 
-// const STEP_UP_BUTTON = document.querySelectorAll('[data-bs-step=\'up\']')
-// const STEP_DOWN_BUTTON = document.querySelectorAll('[data-bs-step=\'down\']')
-
 const STEP_UP_BUTTON = '[data-bs-step="up"]'
 const STEP_DOWN_BUTTON = '[data-bs-step="down"]'
 const INPUT_GROUP = '.input-group'
@@ -44,17 +41,21 @@ class QuantitySelector extends BaseComponent {
 
   // Public
   static StepUp(event) {
-      event.preventDefault()
-      const PARENT = event.target.closest(INPUT_GROUP)
-      const COUNTER_INPUT = PARENT.querySelector('[data-bs-step=\'counter\']')
+    event.preventDefault()
+    const PARENT = event.target.closest(INPUT_GROUP)
+    const COUNTER_INPUT = PARENT.querySelector('[data-bs-step=\'counter\']')
+    if (COUNTER_INPUT.value >= 0 || PARENT.classList.contains('allow-negatives-values')) {
       COUNTER_INPUT.value = ++COUNTER_INPUT.value
+    }
   }
 
   static StepDown(event) {
-      event.preventDefault()
-      const PARENT = event.target.closest(INPUT_GROUP)
-      const COUNTER_INPUT = PARENT.querySelector('[data-bs-step=\'counter\']')
+    event.preventDefault()
+    const PARENT = event.target.closest(INPUT_GROUP)
+    const COUNTER_INPUT = PARENT.querySelector('[data-bs-step=\'counter\']')
+    if (COUNTER_INPUT.value > 0 || PARENT.classList.contains('allow-negatives-values')) {
       COUNTER_INPUT.value = --COUNTER_INPUT.value
+    }
   }
 }
 
