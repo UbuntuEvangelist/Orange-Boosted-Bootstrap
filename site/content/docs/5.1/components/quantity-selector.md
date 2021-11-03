@@ -34,7 +34,7 @@ Quantity selector is a form element used to select a number. For proper styling,
     <label class="input-group-text" for="inputQuantitySelector2">Quantity selector small: </label>
     <div id="quantity-selectors-small" class="input-group">
         <button type="button" class="btn btn-icon btn-sm btn-secondary" data-bs-step="down">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
+            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#remove" />
             </svg>
             <span class="visually-hidden">Step up</span>
@@ -42,7 +42,7 @@ Quantity selector is a form element used to select a number. For proper styling,
         <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputQuantitySelector2" class="form-control"
             data-bs-step="counter" name="quantity" title="quantity" min="0" value="0" aria-label="Quantity selector">
         <button type="button" class="btn btn-icon btn-sm btn-secondary" data-bs-step="up">
-            <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
+            <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#add" />
             </svg>
             <span class="visually-hidden">Step down</span>
