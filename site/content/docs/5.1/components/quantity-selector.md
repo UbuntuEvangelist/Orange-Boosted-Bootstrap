@@ -10,6 +10,8 @@ toc: true
 
 Quantity selector is a form element used to select a number. For proper styling, use one of the two **required** contextual classes (e.g., `.quantity-selector-large`).
 
+The **pattern** attributes specifies a regular expression that the `input` element's value is checked against on form submission.
+
 {{< example >}}
 <div class="quantity-selector quantity-selector-large">
     <label class="input-group-text" for="inputQuantitySelector1">Quantity selector large: </label>
@@ -21,7 +23,7 @@ Quantity selector is a form element used to select a number. For proper styling,
             <span class="visually-hidden">Step up</span>
         </button>
         <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputQuantitySelector1" class="form-control"
-            data-bs-step="counter" name="quantity" title="quantity" min="0" value="0" aria-label="Quantity selector">
+            data-bs-step="counter" name="quantity" title="quantity" value="0" aria-label="Quantity selector">
         <button type="button" class="btn btn-icon btn-secondary" data-bs-step="up">
             <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#add" />
@@ -40,7 +42,7 @@ Quantity selector is a form element used to select a number. For proper styling,
             <span class="visually-hidden">Step up</span>
         </button>
         <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputQuantitySelector2" class="form-control"
-            data-bs-step="counter" name="quantity" title="quantity" min="0" value="0" aria-label="Quantity selector">
+            data-bs-step="counter" name="quantity" title="quantity" value="0" aria-label="Quantity selector">
         <button type="button" class="btn btn-icon btn-sm btn-secondary" data-bs-step="up">
             <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#add" />
@@ -64,7 +66,7 @@ It is possible to disable the possibility to manually change the value of the in
             <span class="visually-hidden">Step up</span>
         </button>
         <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputQuantitySelector3" class="form-control"
-            data-bs-step="counter" name="quantity" title="quantity" min="0" value="0" aria-label="Quantity selector" readonly>
+            data-bs-step="counter" name="quantity" title="quantity" value="0" aria-label="Quantity selector" readonly>
         <button type="button" class="btn btn-icon btn-secondary" data-bs-step="up">
             <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false" class="me-1">
                 <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#add" />
@@ -76,6 +78,8 @@ It is possible to disable the possibility to manually change the value of the in
 {{< /example >}}
 
 You can also add the class `.allow-negatives-values` on the `.input-group` in order to allow negative values.
+
+Do not forget to modify the **pattern** attribute to reflect this change.
 
 {{< example >}}
 <form class="row g-3 needs-validation" novalidate>
@@ -92,7 +96,7 @@ You can also add the class `.allow-negatives-values` on the `.input-group` in or
                     <span class="visually-hidden">Step up</span>
                 </button>
                 <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputQuantitySelector4" class="form-control"
-                    data-bs-step="counter" name="quantity" title="quantity" min="0" value="0"
+                    data-bs-step="counter" name="quantity" title="quantity" value="0"
                     aria-label="Quantity selector">
                 <button type="button" class="btn btn-icon btn-secondary" data-bs-step="up">
                     <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"
@@ -101,9 +105,6 @@ You can also add the class `.allow-negatives-values` on the `.input-group` in or
                     </svg>
                     <span class="visually-hidden">Step down</span>
                 </button>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
                 <div class="invalid-feedback">
                     Quantity must be equal or greater to 0!
                 </div>
@@ -122,8 +123,8 @@ You can also add the class `.allow-negatives-values` on the `.input-group` in or
                     </svg>
                     <span class="visually-hidden">Step up</span>
                 </button>
-                <input type="text" inputmode="numeric" pattern="[0-9]*" id="inputQuantitySelector4" class="form-control"
-                    data-bs-step="counter" name="quantity" title="quantity" min="0" value="0"
+                <input type="text" inputmode="numeric" pattern="^-?[0-9]*" id="inputQuantitySelector4" class="form-control"
+                    data-bs-step="counter" name="quantity" title="quantity" value="0"
                     aria-label="Quantity selector">
                 <button type="button" class="btn btn-icon btn-secondary" data-bs-step="up">
                     <svg width="1.25rem" height="1.25rem" fill="currentColor" aria-hidden="true" focusable="false"
@@ -134,9 +135,6 @@ You can also add the class `.allow-negatives-values` on the `.input-group` in or
                 </button>
                 <div class="valid-feedback">
                     Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Quantity must be equal or greater to 0!
                 </div>
             </div>
         </div>
