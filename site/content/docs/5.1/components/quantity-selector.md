@@ -113,7 +113,7 @@ Do not forget to modify the **pattern** attribute to reflect this change.
     </div>
     <div class="col-12">
         <div class="quantity-selector quantity-selector-large">
-            <label class="input-group-text" for="inputQuantitySelector4">Allow negatives values example:
+            <label class="input-group-text" for="inputQuantitySelector5">Allow negatives values example:
             </label>
             <div class="input-group has-validation allow-negatives-values">
                 <button type="button" class="btn btn-icon btn-secondary" data-bs-step="down">
@@ -123,7 +123,7 @@ Do not forget to modify the **pattern** attribute to reflect this change.
                     </svg>
                     <span class="visually-hidden">Step up</span>
                 </button>
-                <input type="text" inputmode="numeric" pattern="^-?[0-9]*" id="inputQuantitySelector4" class="form-control"
+                <input type="text" inputmode="numeric" pattern="^-?[0-9]*" id="inputQuantitySelector5" class="form-control"
                     data-bs-step="counter" name="quantity" title="quantity" value="0"
                     aria-label="Quantity selector">
                 <button type="button" class="btn btn-icon btn-secondary" data-bs-step="up">
