@@ -52,6 +52,7 @@
     - title: Checks & radios
     - title: Range
     - title: Input group
+    - title: Quantity selector
     - title: Layout
     - title: Validation
 
@@ -78,7 +79,6 @@
     - title: Placeholders
     - title: Popovers
     - title: Progress
-    - title: Quantity selector
     - title: Scrollspy
     - title: Spinners
     - title: Stepped process
