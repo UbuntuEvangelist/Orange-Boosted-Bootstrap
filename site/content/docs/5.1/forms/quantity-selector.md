@@ -2,7 +2,7 @@
 layout: docs
 title: Quantity selector
 description: Form element used to select a number.
-group: components
+group: forms
 toc: true
 ---
 
@@ -133,9 +133,6 @@ Do not forget to modify the **pattern** attribute to reflect this change.
                     </svg>
                     <span class="visually-hidden">Step down</span>
                 </button>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
             </div>
         </div>
     </div>
