@@ -75,6 +75,21 @@
       }
     }
 
+    .quantity-selector {
+      .input-group {
+        .form-control {
+          @include form-validation-state-selector($state) {
+            border-right: none;
+            border-left: none;
+          }
+        }
+        button:first-of-type,
+        button:last-of-type {
+          border-color: $color;
+        }
+      }
+    }
+
     // Boosted mod: no icon in background for textarea
 
     .form-select {
